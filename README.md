@@ -13,7 +13,7 @@ Follow these steps to set up the project locally:
 
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/NutriScan.git
+git clone https://github.com/adityakesarwani10/NutriScan.git
 cd NutriScan
 ```
 
@@ -37,7 +37,7 @@ To deploy the project on GitHub Pages:
 
 1. Open `package.json` and add:
 ```json
-"homepage": "https://yourusername.github.io/NutriScan"
+"homepage": "https://adityakesarwani10.github.io/NutriScan"
 ```
 2. Run the following commands:
 ```sh
