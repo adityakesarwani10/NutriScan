@@ -43,16 +43,16 @@ function Hero_sec() {
 
       {/* Mobile Search Bar */}
       <div className="mt-6 flex flex-col items-center gap-4 md:hidden">
-        <div className="flex items-center w-full max-w-xl overflow-hidden shadow-sm">
+        <div className="flex w-full max-w-md rounded-lg overflow-hidden border shadow">
           <input
             type="text"
             placeholder="Search product..."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            className="flex-grow px-4 py-4 rounded-l-full border-t border-b border-l border-gray-300 focus:outline-none text-lg"
+            className="flex-grow px-4 py-4 rounded-l-full border-t border-b border-l border-gray-300 focus:outline-none text-lg px-4 py-2 outline-none min-w-0"
           />
           <button
-            className="bg-blue-600 text-white p-4 px-4 rounded-r-full hover:bg-blue-700 flex items-center justify-center"
+            className="bg-blue-600 text-white p-4 px-4 rounded-r-full hover:bg-blue-700 flex items-center justify-center bg-blue-500 text-white px-4 py-2 hover:bg-blue-600"
             onClick={handleMobileSend}
           >
             <FiSend className="text-lg" />

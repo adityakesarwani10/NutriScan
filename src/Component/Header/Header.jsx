@@ -3,9 +3,10 @@ import logo from './Nutriscan_logo.png';
 import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Header = ({ searchText }) => {
-
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const inputRef = useRef();
 
   useEffect(() => {
@@ -79,20 +80,72 @@ const Header = ({ searchText }) => {
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button className="text-white focus:outline-none">
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16" />
+        <div className="relative md:hidden">
+          <button
+            className="text-white focus:outline-none"
+            onClick={() => setDropdownOpen(!isDropdownOpen)}
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
+
+          {isDropdownOpen && (
+            <div className="absolute top-full right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg z-50">
+              <ul className="flex flex-col space-y-2 p-4">
+                <li><NavLink to="/"
+                      className={({isActive}) =>
+                          `${isActive? "text-blue-800" : "text-gray-800"} hover:text-blue-300`
+                      }
+                  >
+                      Home
+                  </NavLink>
+                  </li>
+                   <li><NavLink to="/About"
+                      className={({isActive}) =>
+                          `${isActive? "text-blue-800" : "text-gray-800"} hover:text-blue-300`
+                      }
+                  >
+                      About
+                  </NavLink>
+                  </li>
+                  <li>
+
+                  <NavLink to="/Services"
+                      className={({isActive}) =>
+                          `${isActive? "text-blue-800" : "text-gray-800"} hover:text-blue-300`
+                      }
+                  >
+                      Services
+                  </NavLink>
+                  </li>
+                  <li>
+                  <NavLink to="/Contact"
+                      className={({isActive}) =>
+                          `${isActive? "text-blue-800" : "text-gray-800"} hover:text-blue-300`
+                      }
+                  >
+                      Contact
+                  </NavLink>
+                  </li>
+                  <li>
+                  <NavLink to="/Profile"
+                      className={({isActive}) =>
+                          `${isActive? "text-blue-800" : "text-gray-800"} hover:text-blue-300`
+                      }
+                  >
+                      Profile
+                  </NavLink></li>
+              </ul>
+            </div>
+          )}
         </div>
+
       </div>
     </header>
   );
