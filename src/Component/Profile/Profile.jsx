@@ -9,8 +9,8 @@ const Profile = () => {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-6 pt-20 mt-20 md:p-12 text-gray-800">
-      <section className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-6 pt-24 mt-20 md:p-12 text-gray-800">
+      <section className="max-w-4xl mt-20 mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             <img

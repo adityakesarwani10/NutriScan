@@ -66,7 +66,7 @@ const Home = () => {
         <motion.button
         onClick={() => window.open("../../../Chatbot/index.html", "_blank")}
           whileHover={{ scale: 1.1 }}
-          className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all"
+          className="bg-blue-600 text-white p-5 rounded-full shadow-lg hover:bg-blue-700 transition-all"
         >
           💬
         </motion.button>
