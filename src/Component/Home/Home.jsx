@@ -4,7 +4,7 @@ import { Lightbulb } from "lucide-react"
 import NutrientCards from "../NutriCard/NutriCard";
 import Hero_sec from "../Hero_sec/Hero_sec";
 
-const awarenessTips = [
+export const awarenessTips = [
   "Scan any food product to get instant nutrition details.",
   "Search for items and get their nutritional breakdown.",
   "Your health starts with awareness — make informed choices.",
@@ -64,6 +64,7 @@ const Home = () => {
       {/* Chatbot Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <motion.button
+        onClick={() => window.open("../../../Chatbot/index.html", "_blank")}
           whileHover={{ scale: 1.1 }}
           className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all"
         >
