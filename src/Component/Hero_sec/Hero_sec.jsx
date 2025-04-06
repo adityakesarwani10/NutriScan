@@ -43,7 +43,7 @@ function Hero_sec() {
 
       {/* Mobile Search Bar */}
       <div className="mt-6 flex flex-col items-center gap-4 md:hidden">
-        <div className="flex w-full max-w-md rounded-lg overflow-hidden border shadow">
+        <div className="flex w-full max-w-md rounded-lg overflow-hidden">
           <input
             type="text"
             placeholder="Search product..."
