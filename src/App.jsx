@@ -8,10 +8,18 @@ function App() {
     const [searchText, setSearchText] = useState("");
     return (
         <>
-            <Header searchText={searchText} />
-            <Outlet context={{ setSearchText }}/>
-            <Footer />
+            <div className="min-h-screen flex flex-col">
+                <Header />
+
+                    <div className="flex-grow">
+                        <Outlet />
+                    </div>
+                <Footer />
+            </div>
         </>
+        // <Header searchText={searchText} />
+        // <Outlet context={{ setSearchText }}/>
+        // <Footer />
     )
 }
 

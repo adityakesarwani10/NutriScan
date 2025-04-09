@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import React, { useState } from "react"; 
+import { useOutletContext, useNavigate } from "react-router-dom";
 import { FiSend } from "react-icons/fi";
+import NutritionSearch from "../API/API";
 
 function Hero_sec() {
-  const { setSearchText } = useOutletContext();
   const [inputText, setInputText] = useState("");
+  const navigate = useNavigate(); // ✅ for programmatic routing
 
   const handleClick = () => {
-    setSearchText("apple"); // default search for desktop button
+    navigate("/NutritionSearch"); // ✅ Navigate after setting text
   };
 
   const handleMobileSend = () => {
     if (inputText.trim()) {
       setSearchText(inputText.trim());
-      setInputText(""); // Clear after search
+      navigate("/NutritionSearch"); // ✅ Go to product search with input
+      setInputText("");
     }
   };
 
@@ -34,8 +36,9 @@ function Hero_sec() {
         >
           Search Product
         </button>
-        <button className="px-6 py-3 text-lg rounded-full border border-gray-300 hover:border-blue-500 transition"
-        onClick={() => window.open("../../../Chatbot/index.html", "_blank")}
+        <button
+          className="px-6 py-3 text-lg rounded-full border border-gray-300 hover:border-blue-500 transition"
+          onClick={() => window.open("../../../Chatbot/index.html", "_blank")}
         >
           Learn More
         </button>
@@ -52,14 +55,13 @@ function Hero_sec() {
             className="flex-grow px-4 py-4 rounded-l-full border-t border-b border-l border-gray-300 focus:outline-none text-lg px-4 py-2 outline-none min-w-0"
           />
           <button
-            className="bg-blue-600 text-white p-4 px-4 rounded-r-full hover:bg-blue-700 flex items-center justify-center bg-blue-500 text-white px-4 py-2 hover:bg-blue-600"
+            className="bg-blue-600 text-white p-4 px-4 rounded-r-full hover:bg-blue-700 flex items-center justify-center"
             onClick={handleMobileSend}
           >
             <FiSend className="text-lg" />
           </button>
         </div>
       </div>
-
     </section>
   );
 }

@@ -5,24 +5,9 @@ import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const Header = ({ searchText }) => {
+const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const inputRef = useRef();
-
-  useEffect(() => {
-    if (searchText && inputRef.current) {
-      let index = 0;
-      inputRef.current.value = "";
-      const interval = setInterval(() => {
-        if (index < searchText.length) {
-          inputRef.current.value += searchText[index];
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 100);
-    }
-  }, [searchText]);
 
   return (
     <header className="bg-gray-900 text-white shadow-md fixed w-full top-0 z-10">
@@ -74,7 +59,6 @@ const Header = ({ searchText }) => {
           <input
             type="text"
             placeholder="Search..."
-            ref={inputRef}
             className="bg-transparent focus:outline-none text-sm text-white placeholder-gray-400"
           />
         </div>
