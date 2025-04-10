@@ -3,11 +3,28 @@ import logo from './Nutriscan_logo.png';
 import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
+import { NutritionSearch } from '..';
 import { useState } from 'react';
+import { useNavigate, useOutletContext } from 'react-router-dom';
+
+// inside Header component
+
+
 
 const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const inputRef = useRef();
+
+  const navigate = useNavigate();
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = () => {
+    if (searchInput.trim()) {
+      setSearchText(searchInput.trim());
+      navigate("/NutritionSearch");
+      setSearchInput(""); // Optional: clear input after search
+    }
+  };
 
   return (
     <header className="bg-gray-900 text-white shadow-md fixed w-full top-0 z-10">
@@ -58,7 +75,9 @@ const Header = () => {
         <div className="hidden md:flex items-center bg-gray-800 px-2 py-1 rounded">
           <input
             type="text"
+            value={searchInput}
             placeholder="Search..."
+            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             className="bg-transparent focus:outline-none text-sm text-white placeholder-gray-400"
           />
         </div>
