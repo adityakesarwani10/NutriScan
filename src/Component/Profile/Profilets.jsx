@@ -1,11 +1,4 @@
 import { useState, useEffect } from "react";
-// import { Button } from "@/components/ui/button";
-// import { Switch } from "@/components/ui/switch";
-// import { LogOut, Edit2, Moon, Sun } from "lucide-react";
-// import ProfileAvatar from "@/components/ProfileAvatar";
-// import ProfileInfo from "@/components/ProfileInfo";
-// import Navbar from "@/components/Navbar";
-// import { toast } from "sonner";
 
 const Profilets = () => {
   const [user, setUser] = useState({
