@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
+import Profilets from './Component/Profile/Profilets.jsx';
 
 import {
   Home,
@@ -28,7 +29,7 @@ const router = createBrowserRouter(
       <Route path='/About' element={<About />} />
       <Route path='/Contact' element={<Contact />} />
       <Route path='/Services' element={<Service />} />
-      <Route path='/Profile' element={<Profile />} />
+      <Route path='/Profile' element={<Profilets />} />
       <Route path='/NutritionSearch' element={<NutritionSearch />} />
       <Route path="/Scanner" element={<BarcodeScanner />} />
     </Route>

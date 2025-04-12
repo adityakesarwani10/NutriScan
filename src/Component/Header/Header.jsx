@@ -1,11 +1,6 @@
-import React from 'react';
 import logo from './Nutriscan_logo.png';
-import { useRef } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useEffect } from 'react';
-import { NutritionSearch } from '..';
-import { useState } from 'react';
-import { useNavigate, useOutletContext } from 'react-router-dom';
+import React, { useRef,useState } from 'react';
+import { useNavigate,NavLink } from 'react-router-dom';
 
 // inside Header component
 
@@ -75,7 +70,9 @@ const Header = () => {
         <div className="hidden md:flex items-center bg-gray-800 px-2 py-1 rounded">
           <input
             type="text"
-            value={searchInput}
+            // value={searchInput}
+            onAbort={(e) => setSearchInput(e.target.value)}
+            ref={inputRef}
             placeholder="Search..."
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             className="bg-transparent focus:outline-none text-sm text-white placeholder-gray-400"

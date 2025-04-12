@@ -1,5 +1,8 @@
 import React from "react";
 import { FaSearch, FaChartPie, FaLeaf } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const services = [
   {
@@ -18,6 +21,7 @@ const services = [
     icon: <FaLeaf className="text-4xl text-violet-500 mb-4" />,
   },
 ];
+
 
 const Service = () => {
   return (
@@ -41,12 +45,12 @@ const Service = () => {
       <div className="text-center mt-16">
         <h3 className="text-2xl text-gray-500 font-semibold mb-2">Want to learn more?</h3>
         <p className="text-gray-600 mb-4">Feel free to get in touch with us for collaborations or support.</p>
-        <a
-          href="/Contact"
+        <Link
+          to="/Contact"
           className="inline-block px-6 py-3 bg-violet-600 text-white font-bold rounded-xl hover:bg-violet-700 transition duration-300"
         >
           Contact Us
-        </a>
+        </Link>
       </div>
     </div>
   );
