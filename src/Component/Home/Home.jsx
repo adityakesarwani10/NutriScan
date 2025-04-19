@@ -64,7 +64,7 @@ const Home = () => {
       {/* Chatbot Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <motion.button
-        onClick={() => window.open("../../../Chatbot/index.html", "_blank")}
+        onClick={() => window.open("https://chatbot-nine-rosy-40.vercel.app/", "_blank")}
           whileHover={{ scale: 1.1 }}
           className="bg-blue-600 text-white p-5 rounded-full shadow-lg hover:bg-blue-700 transition-all"
         >

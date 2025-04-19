@@ -38,7 +38,7 @@ function Hero_sec() {
         </button>
         <button
           className="px-6 py-3 text-lg rounded-full border border-gray-300 hover:border-blue-500 transition"
-          onClick={() => window.open("../../../Chatbot/index.html", "_blank")}
+          onClick={() => window.open("https://chatbot-nine-rosy-40.vercel.app/", "_blank")}
         >
           Learn More
         </button>
