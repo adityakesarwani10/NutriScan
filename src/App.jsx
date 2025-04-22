@@ -17,9 +17,6 @@ function App() {
                 <Footer />
             </div>
         </>
-        // <Header searchText={searchText} />
-        // <Outlet context={{ setSearchText }}/>
-        // <Footer />
     )
 }
 

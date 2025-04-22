@@ -10,18 +10,18 @@ const BarcodeScanner = () => {
 
         if (scannerRef.current) {
             const maxAttempts = 50;
-            let errorLogged = false; // Add this to avoid overlogging.
-
+            let errorLogged = false; 
+            
             codeReader.decodeFromVideoDevice(undefined, scannerRef.current, (result, err) => {
                 if (result) {
                     console.log("Scanned Code:", result.text);
                     setBarcode(result.text);
-                    codeReader.reset(); // stop after success
-                    errorLogged = false; // Reset the errorLogged flag.
+                    codeReader.reset(); 
+                    errorLogged = false; 
                 }
 
                 if (err && err.name !== 'NotFoundException') {
-                  // Only log if error hasn't already been logged.
+                    
                   if (!errorLogged) {
                       console.error("Scan Error:", err.message);
                       errorLogged = true;
@@ -31,12 +31,12 @@ const BarcodeScanner = () => {
                 if (err && ++attempts >= maxAttempts) {
                     codeReader.reset();
                     setBarcode("Couldn't detect barcode. Please try again.");
-                    errorLogged = false; // Reset the errorLogged flag.
+                    errorLogged = false;
                 }
             });
 
         return () => {
-            codeReader.reset(); // Cleanup on unmount
+            codeReader.reset(); 
         };
     }
     }, []);

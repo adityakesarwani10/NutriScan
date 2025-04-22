@@ -20,7 +20,6 @@ import {
   createRoutesFromElements
 } from 'react-router-dom';
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -30,7 +29,7 @@ const router = createBrowserRouter(
       <Route path='/Services' element={<Service />} />
       <Route path='/Profile' element={<Profile />} />
       <Route path='/NutritionSearch' element={<NutritionSearch />} />
-      <Route path="/Scanner" element={<BarcodeScanner />} />
+      <Route path="/Scanner" element={<BarcodeScanner />}/>
     </Route>
   )
 )
