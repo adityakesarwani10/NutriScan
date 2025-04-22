@@ -147,6 +147,15 @@ const Header = () => {
                       }
                   >
                       Profile
+                  </NavLink>
+                  </li>
+                  <li>
+                  <NavLink to="/Scanner"
+                      className={({isActive}) =>
+                          `${isActive? "text-blue-800" : "text-gray-800"} hover:text-blue-300`
+                      }
+                  >
+                      Scanner
                   </NavLink></li>
               </ul>
             </div>
