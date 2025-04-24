@@ -1,6 +1,8 @@
 import logo from './Nutriscan_logo.png';
 import React, { useRef,useState } from 'react';
-import { useNavigate,NavLink } from 'react-router-dom';
+import { useNavigate,NavLink, Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button"
+
 
 // inside Header component
 
@@ -73,8 +75,19 @@ const Header = () => {
         </NavLink>
         </nav>
 
+        <div className="flex items-center space-x-3">
+          <NavLink to="/login">
+            <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
+              Sign Up
+            </Button>
+          </NavLink>
+          <NavLink to="/signup">
+            <Button className="bg-blue-500 text-white hover:bg-blue-600">Get Started</Button>
+          </NavLink>
+        </div>
+
         {/* Search Bar */}
-        <div className="hidden md:flex items-center bg-gray-800 px-2 py-1 rounded">
+        {/* <div className="hidden md:flex items-center bg-gray-800 px-2 py-1 rounded">
           <input
             type="text"
             // value={searchInput}
@@ -84,7 +97,7 @@ const Header = () => {
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             className="bg-transparent focus:outline-none text-sm text-white placeholder-gray-400"
           />
-        </div>
+        </div> */}
 
         {/* Mobile Menu Icon */}
         <div className="relative md:hidden">

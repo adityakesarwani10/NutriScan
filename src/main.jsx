@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-
 import {
   Home,
   About,
@@ -10,7 +9,9 @@ import {
   Service,
   NutritionSearch,
   Profile,
-  BarcodeScanner
+  BarcodeScanner,
+  LoginPage,
+  // SignupPage
 } from './Component';
 
 import {
@@ -24,6 +25,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route path='' element={<Home />} />
+      <Route path='/login' element={<LoginPage />} />
+      {/* <Route path='/signup' element={<SignupPage />} /> */}
       <Route path='/About' element={<About />} />
       <Route path='/Contact' element={<Contact />} />
       <Route path='/Services' element={<Service />} />

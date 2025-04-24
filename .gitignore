@@ -21,6 +21,7 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
+*.env
 *.sw?
 /src/Component/ui
 .vercel
