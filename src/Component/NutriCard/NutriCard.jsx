@@ -115,9 +115,6 @@ const NutriCardSlider = () => {
                       </p>
                     ))}
                   </div>
-                  <button className="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl">
-                    Read More
-                  </button>
                 </div>
               </div>
             </div>
