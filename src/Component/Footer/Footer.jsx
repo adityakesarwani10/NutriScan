@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="bg-gray-950 mt-10 text-gray-300 py-6">
             <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-                <p className="text-sm">© Aditya Kesarwani. All rights reserved.</p>
+                <p className="text-sm">© NutriScan 2025. All rights reserved.</p>
                 <div className="flex space-x-6 mr-8 mt-2 md:mt-0">
                 <a href="https://github.com/adityakesarwani10" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="text-2xl hover:text-white" />
