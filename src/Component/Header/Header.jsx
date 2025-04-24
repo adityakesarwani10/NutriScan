@@ -78,7 +78,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <NavLink to="/login">
             <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
-              Sign Up
+              Sign in
             </Button>
           </NavLink>
           <NavLink to="/signup">
