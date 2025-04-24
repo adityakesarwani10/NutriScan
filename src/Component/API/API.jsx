@@ -56,7 +56,7 @@ const NutritionSearch = () => {
       <div className="flex items-center gap-2">
         <input
           type="text"
-          placeholder="e.g., banana, 1 apple, milk"
+          placeholder="e.g., Packaged or Unpackaged food"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -82,8 +82,8 @@ const NutritionSearch = () => {
             {nutritionData.description || "No Name Found"}
           </h2>
           <ul className="text-sm text-gray-700 space-y-1">
-            <li><strong>Brand:</strong> {nutritionData.brandOwner || "N/A"}</li>
-            <li><strong>Ingredients:</strong> {nutritionData.ingredients || "N/A"}</li>
+            {/* <li><strong>Brand:</strong> {nutritionData.brandOwner || "N/A"}</li> */}
+            {/* <li><strong>Ingredients:</strong> {nutritionData.ingredients || "N/A"}</li> */}
             {nutritionData.foodNutrients?.map((nutrient, index) => (
               <li key={index}>
                 <strong>{nutrient.nutrientName}:</strong> {nutrient.value} {nutrient.unitName}
